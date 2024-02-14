@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
-import "firebase/auth";
-
+import { getAuth } from "firebase/auth";
+import firebase from "firebase/compat/app";
 const firebaseConfig = {
   apiKey: "AIzaSyAbBny3o9UHR5FgcZ4zaNex7OkvmWugaCk",
   authDomain: "nwitter-48d28.firebaseapp.com",
@@ -10,6 +10,6 @@ const firebaseConfig = {
   appId: "1:150512697468:web:2bd0143d8fa670dcecc9f9",
 };
 
-const app = initializeApp(firebaseConfig);
-
-export default app;
+export const firebaseInstance = firebase;
+export const app = initializeApp(firebaseConfig);
+export const authService = getAuth();
